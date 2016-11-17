@@ -40,7 +40,7 @@ public class CustomerRestControllerIntegrationTest {
     }
 
     @Test
-    public void getAllCustomers() throws Exception {
+    public void canGetCustomers() throws Exception {
         assertThat(this.restTemplate.getForObject(base.toString() + "/customers",
                 String.class)).contains("Alice");
     }
