@@ -40,8 +40,14 @@ public class CustomerRestControllerIntegrationTest {
     }
 
     @Test
-    public void canGetCustomers() throws Exception {
+    public void shouldGetExistCustomer() throws Exception {
         assertThat(this.restTemplate.getForObject(base.toString() + "/customers",
                 String.class)).contains("Alice");
+    }
+
+    @Test
+    public void shouldNotGetNonExistCustomer() throws Exception {
+        assertThat(this.restTemplate.getForObject(base.toString() + "/customers",
+                String.class)).doesNotContain("Allen");
     }
 }
