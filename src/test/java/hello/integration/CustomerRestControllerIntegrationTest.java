@@ -1,8 +1,11 @@
-package hello;
+package hello.integration;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
 import java.net.URL;
+
+import hello.Customer;
+import hello.CustomerRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
